@@ -1,0 +1,32 @@
+[tool.poetry]
+authors = ["m09 <142691+m09@users.noreply.github.com>"]
+description = ""
+name = "tp-nginx"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+nitpick = "*"
+pylint = "*"
+
+[tool.nitpick]
+style = "gh://shuuchuu/nitpick/nitpick-style.toml"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+strict_optional = true
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
