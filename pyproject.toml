@@ -1,11 +1,12 @@
 [tool.poetry]
 authors = ["m09 <142691+m09@users.noreply.github.com>"]
 description = ""
-name = "tp-nginx"
+name = "log-filter"
 readme = "README.md"
 version = "0.1.0"
 
 [tool.poetry.dependencies]
+pandas = "^2"
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
@@ -26,6 +27,9 @@ profile = "black"
 disallow_untyped_defs = true
 ignore_missing_imports = true
 strict_optional = true
+
+[tool.poetry.scripts]
+log-filter = "log_filter.cli:main"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
